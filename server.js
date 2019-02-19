@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-var decode = require('salesforce-signed-request');
+
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/sfdcApp'));
