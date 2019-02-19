@@ -23,7 +23,7 @@ app.post('/signedrequest', function(req,res) {
             'Authorization': 'OAuth ' + oauthToken
         }
     };
-
+   console.log('Token -'+oauthToken);
 
     request(contactRequest, function(err, response, body) {
         res.sendFile(path.join(__dirname,'/dist/sfdcApp/index.html'));
