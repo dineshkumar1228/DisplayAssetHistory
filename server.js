@@ -13,7 +13,7 @@ app.use(bodyParser()); // pull information from html in POST
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/sfdcApp'));
 
-app.post('/signedrequest', function(req,res) {
+app.get('/signedrequest', function(req,res) {
     var signedRequest = decode(req.body.signed_request, consumerSecret),
     context = signedRequest.context,
     oauthToken = signedRequest.client.oauthToken,
