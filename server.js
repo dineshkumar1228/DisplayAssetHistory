@@ -14,7 +14,7 @@ app.post('/signedrequest', function(req,res) {
     var json = decode(req.body.signed_request, '3B148A2F76272D9C2557037B7C15824EA977A6A53D149350BB2B1EAA5A612C1A');
 });
 
-console.log('json -- '+json);
+
 /**app.get('/*', function(req,res) {
     
     res.sendFile(path.join(__dirname,'/dist/sfdcApp/index.html'));
