@@ -15,15 +15,15 @@ app.use(express.static('./dist/sfdcApp'));
 
 app.get('/signedrequest', function(req,res) {
     var signedRequest = decode(req.body.signed_request, consumerSecret),
-    context = signedRequest.context,
+   /** context = signedRequest.context,
     oauthToken = signedRequest.client.oauthToken,
-    instanceUrl = signedRequest.client.instanceUrl,
+    instanceUrl = signedRequest.client.instanceUrl, **/
     contactRequest = {
         headers: {
             'Authorization': 'OAuth ' + oauthToken
         }
     };
-   console.log('Token -'+oauthToken);
+   console.log('Token -'+oauthToken); 
 
     request(contactRequest, function(err, response, body) {
         res.sendFile(path.join(__dirname,'/dist/sfdcApp/index.html'));
