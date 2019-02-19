@@ -1,14 +1,13 @@
 //Install express server
-const express = require('express');
-const path = require('path');
+var express = require('express');
+var path = require('path');
 
 var    bodyParser = require('body-parser'),
     request = require('request'),
     qrcode = require('qrcode-npm'),
     decode = require('salesforce-signed-request'),
-    consumerSecret = process.env.CONSUMER_SECRET,
-
-const app = express();
+    consumerSecret = '3B148A2F76272D9C2557037B7C15824EA977A6A53D149350BB2B1EAA5A612C1A'
+    app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser()); // pull information from html in POST
 // Serve only the static files form the dist directory
