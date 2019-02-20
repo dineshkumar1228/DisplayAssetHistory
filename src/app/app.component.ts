@@ -30,7 +30,7 @@ export class AppComponent {
       })
     };
 
-    this.httpClient.get("https://cors-anywhere.herokuapp.com/https://odata-us.heroku.com/odata/v4/a94c323f3ba340788e611ff9338da177/public$AssetHistoryBackup?$top=2000", httpOptions)
+    this.httpClient.get("https://cors-anywhere.herokuapp.com/https://odata-us.heroku.com/odata/v4/a94c323f3ba340788e611ff9338da177/public$AssetHistoryBackup", httpOptions)
       .subscribe(res => {
         this.httpdata = res;
         console.log('REs- '+res);
